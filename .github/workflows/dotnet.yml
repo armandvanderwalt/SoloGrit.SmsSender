@@ -18,9 +18,9 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore Yotta.SoloGrit.SmsSender 
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build Yotta.SoloGrit.SmsSender --no-restore
     - name: Publish
       uses: brandedoutcast/publish-nuget@v2.5.2
       with:
